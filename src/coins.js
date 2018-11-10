@@ -7,6 +7,8 @@ const coins = {
   BTG: 'btg',
   LTC: 'ltc',
   ZEC: 'zec',
+  ZER: 'zer', //Zero Mainnet
+  ZET: 'zet', //Zero Testnet
   VRSC: 'vrsc',
   VERUSTEST: 'verustest',
   DASH: 'dash',
@@ -31,6 +33,14 @@ coins.isLitecoin = function (network) {
 
 coins.isZcash = function (network) {
   return !!network.isZcash
+}
+
+coins.isZcash = function (network) {
+  return typeforce.value(coins.ZER)(network.coin)
+}
+
+coins.isZcash = function (network) {
+  return typeforce.value(coins.ZET)(network.coin)
 }
 
 coins.isVerus = function (network) {
