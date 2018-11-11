@@ -35,14 +35,6 @@ coins.isZcash = function (network) {
   return !!network.isZcash
 }
 
-coins.isZcash = function (network) {
-  return typeforce.value(coins.ZER)(network.coin)
-}
-
-coins.isZcash = function (network) {
-  return typeforce.value(coins.ZET)(network.coin)
-}
-
 coins.isVerus = function (network) {
   return typeforce.value(coins.VRSC)(network.coin)
 }
